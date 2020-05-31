@@ -25,7 +25,7 @@ SECRET_KEY = '*77oe2@rkayw^gdj7&f2k44@hj4k0y8&9=vclk4zi!247s&6vl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cdcf0ed559eb.ngrok.io']
+ALLOWED_HOSTS = ['ec2-13-126-206-141.ap-south-1.compute.amazonaws.com','cdcf0ed559eb.ngrok.io','127.0.0.1','localhost','de330c3a8423.ngrok.io']
 
 
 # Application definition
@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'truckscheduling.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'truck_schedules',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3307',
+        'ENGINE': 'mysql_rds.backend',
+        'NAME': 'truck-schedules-1',
+        'USER': 'truckmaster',
+        'PASSWORD': 'rootroot',
+        'HOST': 'truck-schedules-1.csikwqbudax4.ap-south-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
