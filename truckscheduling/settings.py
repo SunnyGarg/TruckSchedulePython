@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'truckscheduling.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql_rds.backend',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'truck-schedules-1',
         'USER': 'truckmaster',
         'PASSWORD': 'rootroot',
